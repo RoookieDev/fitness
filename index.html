@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Shape In</title>
+     <!--Bootstrap-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+ 
+ 
+   <!--Fontawesome CDN-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+ 
+   <!--Google Fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&family=Montserrat+Alternates:wght@100;200;400&family=Nunito:wght@700&family=Poppins:wght@100;200;400&family=Raleway:wght@200;400;600&family=Roboto&family=Source+Serif+4:opsz,wght@8..60,300&display=swap" rel="stylesheet">
+ 
+ <!--JQuery CDN-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+ 
+ 
+ <!--Owl Carousel CDN-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+ 
+ 
+ 
+ 
+</head>
+
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins',sans-serif;
+        background: none;
+    }
+    .row{
+        margin: 0px;
+    }
+
+
+    #title{
+        position: relative;
+        width: 100%;
+        font-size: 2em;
+        text-align: center;
+        text-transform: unset;
+        font-weight: 400;
+        padding:20px 10px;
+        background: none;
+        color: black;
+        font-family: 'Montserrat Alternates',sans-serif;
+        margin: 0px 0px;
+        font-weight: 400;
+    }
+    #title span{
+        position: relative;
+        padding: 5px 10px;
+        background:white;
+    }
+    #title::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top:50%;
+        transform: translate(0,-50%);
+        width: 100%;
+        height: 0.5px;
+        background: grey;
+    }
+
+    .tgl_btn{
+       position: relative;
+       width:auto;
+       height: auto;
+       display: none;
+       font-size: 1.5em;
+       padding: 10px;
+       justify-content: end;
+       align-content: flex-end;
+    }
+
+    .main_con{
+        position: relative;
+        width: 100%;
+        background: white;
+    }
+    .upper_con{
+        position: relative;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        background:none;
+    }
+    .upper_con .logo_con{
+        position: relative;
+        width: auto;
+        background: none;
+        padding: 10px 20px;
+        display: grid;
+        align-content: flex-end;
+
+    }
+    .upper_con .logo_con h4{
+        position: relative;
+        width: 100%;
+        font-family: 'Montserrat alternates',sans-serif;
+        font-weight: 600;
+        color:rgb(83, 83, 7);
+        margin: 0px;
+    }
+    .upper_con .logo_con img{
+        position: relative;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .upper_con .menu_bar{
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: none;
+        padding: 0;
+    }
+    .upper_con .menu_bar nav{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: none;
+        display: grid;
+        align-content:end;
+    }
+    .upper_con .menu_bar nav ul{
+        position: relative;
+        width: 100%;
+        height:auto;   
+        text-align: right;
+        background: none;
+        
+    }
+    .upper_con .menu_bar nav ul li{
+        position: relative;
+        height: auto;
+        display: inline-block;
+        list-style: none;
+        background: none;
+        margin: 0;
+        padding: 0px 0px;
+    }
+    .upper_con .menu_bar nav ul li a{
+        position: relative;
+        width: 100%;
+        padding: 7px 20px;
+        background: none;
+        text-decoration: none;
+        color: black;
+        border-radius: 3px;
+        font-family:'Poppins',sans-serif;
+        font-weight: 400;
+    }
+    .upper_con .menu_bar nav ul li a:hover{
+        background: palegreen;
+    }
+    .upper_con .menu_bar nav ul li button{
+        border: none;
+        padding: 5px 15px;
+        background: rgb(27, 144, 27);
+        border-radius: 3px;
+        color: white;
+    }
+    .upper_con .menu_bar nav ul li button:hover{
+        background: limegreen;
+    }
+
+    .first_con{
+        position: relative;
+        width: 100%;
+        min-height: 600px;
+        max-height: 100%;
+        background: url("assets/image/bg/stronger-young-muscular-caucasian-athlete-practicing-lunges-gym-with-barbell-male-model-doing-strength-exercises-training-his-lower-body-wellness-healthy-lifestyle-bodybuilding-concept.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+  /*  .first_con::before{
+        content: '';
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 0;
+        clip-path: circle(650px at 50% 0%);
+    } */
+    .first_con .text_bx{
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background:  rgba(0, 0, 0,0.5);
+        background-size: cover;
+        background-blend-mode: overlay;
+        background-position: top;
+        display: grid;
+        color:white;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        z-index: 1;
+    }
+    .first_con .text_bx h1{
+        position: relative;
+        width: 100%;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 800;
+        font-size: 4em;
+        letter-spacing: 3px;
+        word-spacing: 5px;
+        text-transform:capitalize;
+    }
+    .first_con .text_bx h4{
+        position: relative;
+        font-size: 1.2em;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 200;
+    }
+    
+    .first_con  .text_bx button{
+        position: relative;
+        padding: 8px 25px;
+        border: 2px solid greenyellow;
+        background: none;
+        color: white;
+        border-radius: 2px;
+        z-index: 0;
+        transition: 0.3s;
+    }
+    .first_con .text_bx button:hover{
+        background: greenyellow;
+        color: black;
+    }
+
+  /*  .first_con .btn_bx button::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background: crimson;
+        z-index: 0;
+    }
+    */
+    .first_con .bg_vid{
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+    .first_con .bg_vid video{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+  
+    .second_con{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        background: white;
+        margin: 10px 0px;
+    }
+    .second_con .text_bx{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-content: center;
+        justify-items: start;
+        padding: 10px 20px;
+    }
+    .second_con .text_bx h4{
+        position: relative;
+        width: 100%;
+        font-size: 1.4em;
+        font-family: 'Montserrat alternates',sans-serif;
+        font-weight: 600;
+        word-spacing: 0px;
+        margin: 0px;
+
+    }
+    .second_con .text_bx h2{
+        position: relative;
+        width: 100%;
+        font-weight: 800;
+        color:limegreen;
+        letter-spacing: 03px;
+        margin: 20px 0px;
+        font-size: 3em;
+        font-family:'Poppins',sans-serif ;
+    }
+    .second_con .text_bx p{
+        position: relative;
+        font-family: 'Montserrat';
+        word-wrap: break-word;
+    }
+    .second_con .text_bx a{
+        position: relative;
+        padding: 8px 20px;
+        background: rgb(70, 163, 70);
+        color: white;
+        font-family: 'Poppins',sans-serif;
+        text-transform: capitalize;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 1px;
+        border-radius: 3px;
+        text-decoration: none;
+    }
+    .second_con .img_bx{
+        position: relative;
+        width: 100%;
+        height: 700px;
+        padding: 0px;
+        display:flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .second_con .img_bx img{
+        position: relative;
+        width: 40%;
+        height: 600px;
+        object-fit: cover;
+        object-position: center;
+        animation: updown 2s alternate infinite;
+        margin: 0px 10px;
+        transition: 0.5s ease-in-out;
+    }
+    .second_con .img_bx img:nth-child(2){
+        height: 600px;
+        top: 100%;
+        transform: translate(0,-100%);
+    }
+    .second_con .img_bx img:hover{
+        object-position: right;
+    }
+   
+    /*@keyframes updown {
+        from{
+            top:0;
+        }
+        to{
+            top:30px;
+        }
+    }*/
+
+
+    .third_con{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: white;
+        color: black;
+       
+    }
+   
+    .third_con .table_con{
+        position: relative;
+        width: 100%;
+        background:black;
+    }
+    .third_con .table_con .card_con{
+        position: relative;
+        width: 100%;
+        padding: 0px 00px;
+    }
+    .third_con .table_con .card_con .card_bx{
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 0px 0px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .third_con .table_con .card_con .card_bx .img_box{
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+    .third_con .table_con .card_con .card_bx .img_box::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background:#e3ffe3;
+        clip-path: circle(60% at 50% 0%);
+    }
+    .third_con .table_con .card_con .card_bx .img_box img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        transition: 0.5s ease-in-out;
+    }
+    .third_con .table_con .card_con .card_bx:hover img{
+        object-position: top;
+    }
+    .third_con .table_con .card_con .card_bx .text_box{
+        position: relative;
+        width: 100%;
+        padding: 10px 10px;
+    } 
+    .third_con .table_con .card_con .card_bx .text_box h5{
+        position: relative;
+        width: 100%;
+        font-size: 1.8em;
+        text-transform: capitalize;
+        text-align: left;
+        font-weight: 400;
+        margin: 20px 0px;
+        word-spacing: 5px;
+        letter-spacing: 1px;
+        color: black;
+    }
+    .third_con .table_con .card_con .card_bx .text_box h5 span{
+        font-weight: 400;
+        color: green;
+    }
+
+
+    .fourth_con{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+    }
+    .fourth_con .sub_con{
+        position: relative;
+        width: 100%;    
+        background: none;
+        padding: 20px 10px;
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 0px;
+    }
+   
+    .fourth_con .sub_con .img_bx{
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+    .fourth_con .sub_con .img_bx img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .fourth_con .sub_con .text_bx{
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: grid;
+        align-content: center;
+        text-align:left;
+    }
+    .fourth_con .sub_con .text_bx h4{
+        position: relative;
+        width: 100%;
+        font-size: 2em;
+        font-family: 'MOntserrat',sans-serif;
+    }
+    .fourth_con .sub_con .text_bx h4 span{
+        font-weight: 600;
+        text-transform: capitalize;
+        font-family: 'Poppins',sans-serif;
+        color: #87b707;
+    }
+    .fourth_con .sub_con .text_bx p{
+        position: relative;
+        width: 100%;
+        margin: 0px;
+        margin-top: 10px;
+        font-family: 'MOntserrat',sans-serif;
+        word-wrap: break-word;
+    }
+
+
+
+    /*Testimonial Container Styling*/
+    .carousel{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 20px 20px;
+        background: rgba(0, 0, 0,1);
+        color: white;
+    }
+    .carousel .carousel-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .carousel .carousel-inner .carousel-item{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s ease-in-out;
+    }
+    .carousel .carousel-inner .carousel-item .text_box{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .carousel .carousel-inner .carousel-item .text_box h4{
+        position: relative;
+        width: 100%;
+        text-transform: capitalize;
+        font-family: 'Poppins',sans-serif;
+        margin-bottom: 20px;
+    }
+    .carousel .carousel-inner .carousel-item .text_box i{
+        font-size: 2em;
+    }
+    .carousel .carousel-inner .carousel-item .text_box p{
+        position: relative;
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%,0);
+        margin: 10px 0px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 200;
+    }
+    .carousel .carousel-control-prev, .carousel .carousel-control-next{
+        background: none;
+        font-size: 1.5em;
+    }
+
+
+    .qna_form{
+        position: relative;
+        width: 100%;
+        padding: 0px 0px;
+        padding: 20px 30px;
+    }
+    .qna_form .text_con{
+        position: relative;
+        width: 100%;
+        padding: 10px;
+       
+    }
+    .qna_form .text_con::before{
+        content: '';
+        left: -0px;
+        top: -0px;
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        background: yellowgreen;
+        z-index: 0;
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+        display: none;
+    }
+    .qna_form .text_con::after{
+        content: '';
+        right: 0px;
+        bottom: 0px;
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        background: yellowgreen;
+        z-index: 0;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        display: none;
+    }
+    .qna_form .text_con .text_box{
+        position: relative;
+        width: 100%;
+        padding: 40px 20px;
+        background: white;
+        z-index: 1;
+    }
+    
+    .qna_form .text_con .text_box h6{
+        position: relative;
+        width: 100%;
+        font-size: 1.4em;
+        font-weight: 400;
+        font-family: 'Poppins',sans-serif;
+        color: black;
+
+    }
+    .qna_form .text_con .text_box h4{
+        position: relative;
+        width: 100%;
+        font-size: 2em;
+        font-family: 'Montserrat alternates',sans-serif;
+        color: green;
+        font-weight: 800;
+    }
+    .qna_form .text_con .text_box p{
+        position: relative;
+        width: 100%;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 200;
+        font-size: 1.2em;
+    }
+    .qna_form .text_con .text_box a{
+        position: relative;
+        background:none;
+        color:black;
+        text-decoration: none;
+        border-radius: 2px;
+        font-size: 1.1em;
+        padding: 0px;
+        margin: 0px;
+        padding:0px 3px;
+        background: none;
+    }
+
+    .qna_form .form_bx{
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: grid;
+        align-content: center;
+        padding: 40px 20px;
+        background: white;
+        justify-items: start;
+    }
+    .qna_form .form_bx h4{
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 1.4em;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        font-family: 'MOntserrat',sans-serif;
+        display: none;
+    }
+    .qna_form .form_bx .form-group{
+        position: relative;
+        width: 100%;
+        display: flex;
+    }
+  
+    .qna_form .form_bx .form-group input{
+        position: relative;
+        width: 100%;
+        padding: 10px 0px;
+        border-radius: 0px;
+        border: none;
+        border-bottom: 1px solid black;
+        margin:0px 5px;
+        outline: none;
+        transition: 0.3s ease;
+    }
+    .qna_form .form_bx .form-group input:focus{
+        border-color: #9acd32;
+    }
+    .qna_form .form_bx .form-group input::placeholder{
+        color: black;
+    }
+
+    .qna_form .form_bx  button{
+        position: relative;
+        padding: 5px 20px;
+        border: none;
+        background: none;
+        z-index: 999;
+        background: black;
+        transition: 0.5s;
+        color: white;
+    }
+    .qna_form .form_bx button::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 1%;
+        height: 100%;
+        background: #9acd32;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    .qna_form .form_bx button:hover:before{
+        width: 100%; 
+    }
+    .qna_form .form_bx button:hover{
+        color: black;
+    }
+
+
+    .footer{
+        position: relative;
+        width: 100%;
+        background: white;
+        color: black;
+        padding: 20px 0px;
+        
+    }
+    .footer .down_menu{
+        position: relative;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    .footer .down_menu h5{
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+    .footer .down_menu ul{
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding: 0px;
+    }
+    .footer .down_menu ul li{
+        list-style: none;
+        position: relative;
+        width: 100%;
+        padding: 5px 0px;
+    }
+    .footer .down_menu ul li a{
+        color: gray;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: 'Montserrat',sans-serif;
+    }
+    .footer .down_menu ul li a:hover{
+        color: black;
+    }
+    .footer .down_menu input{
+        position: relative;
+        width: 100%;
+        text-align: left;
+        border-radius: 0px;
+        border: 2px solid crimson;
+        padding: 7px 20px;
+        margin: 10px 0px;
+        outline: none;
+        background: none;
+        color: white;
+    }
+    .footer .down_menu input:focus{
+        border-color: white;
+    }
+    .footer .down_menu button{
+        position: relative;
+        width: auto;
+        padding: 6px 25px;
+        text-align: center;
+        border: none;
+        color: white;
+        background: crimson;
+        transition: 0.3s ease;
+    }
+    .footer .down_menu button:hover{
+        background: white;
+        color: black;
+    }
+    .footer p{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 1.2em;
+        padding:10px 5px;
+        border-top: 1px solid white;
+        font-weight: 200;
+        display: none;
+    }
+  
+    
+   
+   
+
+   
+
+
+
+    /*Responsive Styling*/
+
+    @media (max-width:768px) {
+        #title{
+            font-size: 2em;
+            font-weight: 600;
+        }
+        #title::before{
+            display: none;
+        }
+        .tgl_btn{
+          display: grid;  
+        }
+        .upper_con{
+            display: block;
+        }
+        .upper_con .logo_con{
+            display: flex;
+            align-content: center;
+        }
+        .upper_con .logo_con img{
+            width: 40%;
+        }
+        
+       
+      
+        .menu_bar{
+            display: none;
+        }
+        .active{
+            display: block;
+        }
+        .upper_con .menu_bar nav ul{
+            text-align: left;
+            background: none;
+            padding: 0px;
+        }
+        .upper_con .menu_bar nav ul li{
+            display: block;
+            padding: 0px 0px;
+        }
+        .upper_con .menu_bar nav ul li a{
+            width: 100%;
+            background: none;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 0px;
+            font-size: 1.1em;
+        }
+        .upper_con .menu_bar nav ul li a:hover{
+            background: #f1ffd4;
+        }
+        .upper_con .menu_bar nav ul li button{
+            width: 100%;
+            padding: 7px 10px;
+            border-radius: 0px;
+        }
+
+
+
+        .first_con .text_bx{
+            background: rgba(0, 0, 0,0.7);
+            text-align: center;
+        }
+        .first_con .text_bx h1{
+            margin-bottom: 10px;
+            font-size: 4em;
+            padding:0px 10px;
+        }
+        .first_con .text_bx h4{
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 2em;
+            padding: 0px 10px;
+        }
+        .first_con .text_bx button{
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            font-weight: 200;
+        }
+
+
+
+
+
+
+
+        
+        .second_con .text_bx h2{
+            font-size: 2em;
+        }
+        .second_con .img_bx{
+            padding: 20px;
+        }
+        .second_con .img_bx img{
+            width: 100%;
+        }
+        .second_con .img_bx img:nth-child(2){
+            display: none;
+        }
+
+
+
+
+
+        .third_con .table_con .card_con .card_bx{
+            padding: 10px 10px;
+            border-bottom:2px solid lightgrey;
+            flex-direction: column !important;
+        }
+        .third_con .table_con .card_con .card_bx .text_box h5{
+            font-weight: 400;
+    
+        }
+       
+        .third_con .table_con .card_con .card_bx .img_box img{
+            object-position: center;
+        }
+
+
+
+        .carousel{
+            padding: 40px 20px;
+        }
+        .carousel .carousel-inner .carousel-item .text_box p{
+            width: 100%;
+            padding: 10px 20px;
+            text-align: center;
+            
+        }
+        .carousel  .carousel-control-next, .carousel  .carousel-control-prev{
+            font-size: 1em;
+        }
+
+
+        .qna_form{
+            padding: 0px;
+        }
+
+
+      
+       
+        
+       
+
+
+    }
+    
+  
+   
+</style>
+<body>
+  <div class="main_con">
+    <div class="container upper_con">
+        <div class="logo_con col-md-2">
+            <div class="tgl_btn">
+                <i class="fa fa-bars"></i>
+               </div>
+            <img src="assets/image/logo/shape in logo 4.png" alt="" >
+          
+        </div>
+        <div class="menu_bar col-md-10">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Classes</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                    <li>
+                        <button>Become a Member</button>
+                    </li>
+                </ul>
+            </nav>
+        </div> 
+        <script>
+          $(document).ready(function(){
+              $(".tgl_btn i").click(function(){
+                  $(".menu_bar").toggleClass('active');
+              });
+          });
+        </script>
+  </div>
+
+  <div class="first_con">
+      <div class="bg_vid">
+        <!--  <video poster="assets/video/bg video/poster/thumbnail.jpg" muted autoplay loop>
+              <source src="assets/video/bg video/production ID_4866520.mp4" type="video/mp4">
+          </video> -->
+      </div>
+      <div class="text_bx">  
+        <h1>Shape In</h1>
+      <h4>Shape which you wanted for years</h4>
+      <button>Take Membership</button>
+      </div>
+  </div>
+
+  
+
+  <div class="second_con">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="text_bx">
+                <h4>Perfect Body Shape</h4>
+                <h2>We Give Perfect <br> shape for your body </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste cum iure impedit corrupti omnis, est numquam iusto ex odit officia labore dicta, accusantium corporis natus eos perferendis, itaque exercitationem quaerat.
+                </p>
+              <a href="">Book Appointment</a>
+             </div>
+         </div>
+
+         <div class="col-md-6 img_bx">
+            <!-- <img src="assets/image/img/side_img.png" alt="" width="100%">-->
+            <img src="assets/image/img/sporty-beautiful-young-woman-taking-professional-yoga-lessons-home.jpg" alt="">
+            <img src="assets/image/img/side-view-man-with-medical-mask-treadmill-gym.jpg" alt="">
+         </div>
+    </div>
+  </div>
+
+  <div class="third_con">
+      <h4 id="title"><span>Why to  choose us</span></h4>
+      
+      <div class="table_con">
+          <div class="row">
+              
+            <div class="col-md-3 col-sm-12 col-xs-3 card_con">
+                  <div class="card_bx">
+                      <div class="img_box">
+                        <img src="assets/image/img/equipment.jpg" alt="" width="100%">
+                      </div>
+                      <div class="text_box">
+                        <h5>well <span>equipped gym</span></h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                             Omnis numquam dolores obcaecati possimus ad.
+                             
+                        </p>
+                      </div>
+                      
+                  </div>
+              </div>
+
+              <div class="col-md-3 col-sm-12 col-xs-3 card_con">
+                <div class="card_bx" style="flex-direction:column-reverse;">
+                    <div class="img_box">
+                        <img src="assets/image/img/trainer 2.jpg" alt="" width="100%">
+                      </div>
+                    <div class="text_box">
+                      <h5>Professional <span>Trainers</span></h5>
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                           Omnis numquam dolores obcaecati possimus ad.
+                           
+                      </p>
+                    </div>
+                   
+                </div>
+            </div>
+            
+           
+
+            <div class="col-md-3 col-sm-12 col-xs-3 card_con">
+                <div class="card_bx">
+                    <div class="img_box">
+                      <img src="assets/image/img/diet.jpg" alt="" width="100%">
+                    </div>
+                    <div class="text_box">
+                      <h5>Nutrician <span>Plan for members</span></h5>
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                           Omnis numquam dolores obcaecati possimus ad.
+                      </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-12 col-xs-3 card_con">
+                <div class="card_bx" style="flex-direction:column-reverse;">
+                    <div class="img_box">
+                        <img src="assets/image/img/session.jpg" alt="" width="100%">
+                      </div>
+                    <div class="text_box">
+                      <h5>Monthly and <span>Regular Session</span></h5>
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                           Omnis numquam dolores obcaecati possimus ad.
+                           
+                      </p>
+                    </div>
+                   
+                </div>
+            </div>
+
+          </div>
+      </div>
+  </div>
+
+  <div class="fourth_con">
+      <h4 id="title"><span>How we work</span></h4>
+      <div class="col-md-12 sub_con">
+          <div class="row justify-content-center">
+              <div class="col-md-4 img_bx">
+                  <img src="assets/image/img/png/equipment_png.png" alt="" width="100%">
+              </div>
+              <div class="col-md-5 text_bx">
+                  <h4>Gym equipment for <br> <span> all type of workout </span> </h4>
+                  <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      Inventore laboriosam eum assumenda, minima quis doloribus illo iusto impedit aut ad.
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-12 sub_con">
+        <div class="row justify-content-center" style="flex-direction:row-reverse;">
+            <div class="col-md-4 img_bx">
+                <img src="assets/image/img/png/trainer.png" alt="" width="100%">
+            </div>
+            <div class="col-md-5 text_bx">
+                <h4>Exprienced  <br> <span>Trainer</span> </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Inventore laboriosam eum assumenda, minima quis doloribus illo iusto impedit aut ad.
+                </p>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="col-md-12 sub_con">
+        <div class="row justify-content-center">
+            <div class="col-md-4 img_bx">
+                <img src="assets/image/img/png/diet food.png" alt="" width="100%">
+            </div>
+            <div class="col-md-5 text_bx">
+                <h4>Proper Diet Plan <br> <span>For individual Member  </span> </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Inventore laboriosam eum assumenda, minima quis doloribus illo iusto impedit aut ad.
+                </p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+<!--Testimonial Container-->
+  <div class="testimonial">
+     <!-- <h4 id="title"> <span>Customer Testimonial</span></h4> --> 
+      <div class="carousel slide" id="testimonial_slide" data-ride="carousel" >
+          <div class="carousel-inner">  
+            <div class="carousel-item active">
+                  <div class="text_box">
+                      <h4><i class="fa fa-circle-user"></i> Anonymous</h4>
+                      
+                      <i class="fa fa-quote-left"></i>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                           Quaerat esse quibusdam repudiandae aut cumque id? Corporis veritatis laborum consectetur porro!
+                      </p>
+                      <i class="fa-solid fa-quote-right"></i>
+
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="text_box">
+                    <h4><i class="fa fa-circle-user"></i> Anonymous 2</h4>
+                    
+                    <i class="fa fa-quote-left"></i>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Quaerat esse quibusdam repudiandae aut cumque id? Corporis veritatis laborum consectetur porro!
+                    </p>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+            </div>
+          </div>
+          <a href="#testimonial_slide" class="carousel-control-prev" data-slide="prev">
+              <span class="fa fa-arrow-left-long  "></span>
+          </a>
+          <a href="#testimonial_slide" class="carousel-control-next" data-slide="next">
+            <span class="fa fa-arrow-right-long  "></span>
+        </a>
+      </div>
+  </div>
+
+
+  <div class="qna_form">
+      <div class="row justify-content-center">
+          <div class="col-md-4 text_con">
+              <div class="text_box">  
+                <h6>Do not hesitate</h6>
+                <h4>Ask Your Question</h4>
+                <p>
+                    To get any information regarding health and fitness, Feel free to ask just fill the form and we will respond.
+                </p>
+                <a href=""><i class="fa-brands fa-facebook-f text-primary"></i></a>
+                <a href=""><i class="fa-brands fa-instagram text-danger"></i></a>
+                <a href=""><i class="fa-brands fa-twitter text-info"></i></a>
+              </div>
+          </div>
+          <div class="col-md-6 form_bx">
+              <h4>Inquery Form</h4>
+              <div class="form-group">
+                  <input type="text" placeholder="First  Name">
+                  <input type="text" placeholder="Last Name">
+              </div>
+
+              <div class="form-group">
+                  <input type="text" placeholder="Phone Number">
+                  <input type="text" placeholder="Email Id">
+              </div>
+
+              <div class="form-group">
+                  <input type="text" placeholder="Write your query here">                 
+              </div>
+              <button type="submit">Submit</button>
+
+          </div>
+      </div>
+  </div>
+
+
+  <div class="footer">
+      <div class="row">
+          <div class="col-md-3 down_menu">
+              <h5>Go To Page</h5>
+              <ul>
+                  <li><a href=""> Home</a></li>
+                  <li><a href=""> Sign-in</a></li>
+                  <li><a href=""> About us</a></li>
+                  <li><a href=""> Contact us</a></li>
+              </ul>
+          </div>
+         
+        <div class="col-md-3 down_menu">
+            <h5>Get in touch</h5>
+            <ul>
+                <li><a href=""><i class="fa fa-phone "></i> <span>+91 123 45 7890</span></a></li>
+                <li><a href=""><i class="fa fa-map-marker text-danger"></i> <span>Vasai, Mumbai, India</span></a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3 down_menu">
+          <h5>Follow us</h5>
+          <ul>
+              <li>
+                  <a href=""><i class="fa-brands fa-facebook"></i> facebook</a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 down_menu">
+            <h5>Get Updated for blog</h5>
+            <input type="text" placeholder="Your Email Address">
+            <button>Submit</button>
+          </div>
+
+          <p>
+              All rights are reserved by Shape In
+          </p>
+      </div>
+  </div>
+
+</body>
+
+
+
+</html>
